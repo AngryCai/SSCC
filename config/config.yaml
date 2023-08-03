@@ -1,0 +1,28 @@
+# general
+seed: 42 #42
+workers: 1
+dataset_root: "D:\\Python\\HSI_Files\\"
+
+# train options
+batch_size: 512
+image_size: 11
+in_channel: 8
+start_epoch: 0
+epochs: 200
+dataset: "HSI-Hou"  # "HSI-InP" "HSI-SaN"  "HSI-PaC"
+
+# model options
+resnet: "ResNet18" # ResNet18 / ResNet34 / ResNet50
+
+feature_dim: 128
+model_path:  "save/HSI-Hou"  # "save/HSI-SaN"; "save/HSI-SaA" "save/HSI-PaC"
+reload: True
+
+# loss options
+learning_rate: 0.0002 #0.00002
+weight_decay: 0.005
+instance_temperature: 0.5 #0.2 #0.5
+cluster_temperature: 0.2 #0.8 #0.8
+# threshold: 0.95
+balow_twins_tradeoff: 0.005
+loss_tradeoff: 0.00005 # 0.05
